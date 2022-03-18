@@ -1,7 +1,3 @@
-<?php
-    var_dump($_GET);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +7,9 @@
     <title>Form</title>
 </head>
 <body>
-    <form>
-        <input name="search" type="text">
+    <form method="post" action="process_form.php">
+        <input name="search" type="text" id="search">
+        <input type="password" name="password" id="password">
         <button>Send</button>
     </form>
 </body>
