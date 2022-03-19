@@ -9,40 +9,40 @@
 <body>
     <form method="post" action="process_form.php">
         <div>
-            text: <input type="text">
+            text: <input type="text" name="text">
         </div>
         <div>
-            password: <input type="password">
+            password: <input type="password" name="password">
         </div>
         <div>
-            tel: <input type="tel">
+            tel: <input type="tel" name="tel">
         </div>
         <div>
-            url: <input type="url">
+            url: <input type="url" name="url">
         </div>
         <div>
-            date: <input type="date">
+            date: <input type="date" name="date">
         </div>
         <div>
-            time: <input type="time">
+            time: <input type="time" name="time">
         </div>
         <div>
-            week: <input type="week">
+            week: <input type="week" name="week">
         </div>
         <div>
-            color: <input type="color">
+            color: <input type="color" name="color">
         </div>
         <div>
-            email: <input type="email">
+            email: <input type="email" name="email">
         </div>
         <div>
-            month: <input type="month">
+            month: <input type="month" name="month">
         </div>
         <div>
-            range: <input type="range">
+            range: <input type="range" name="range">
         </div>
         <div>
-            hidden: <input name="hidden" type="hidden">
+            hidden: <input name="hidden" type="hidden" value="control">
         </div>
         <div>
             number: <input name="number" type="number">
