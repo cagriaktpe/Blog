@@ -12,40 +12,7 @@
             text: <input type="text" name="text">
         </div>
         <div>
-            password: <input type="password" name="password">
-        </div>
-        <div>
-            tel: <input type="tel" name="tel">
-        </div>
-        <div>
-            url: <input type="url" name="url">
-        </div>
-        <div>
-            date: <input type="date" name="date">
-        </div>
-        <div>
-            time: <input type="time" name="time">
-        </div>
-        <div>
-            week: <input type="week" name="week">
-        </div>
-        <div>
-            color: <input type="color" name="color">
-        </div>
-        <div>
-            email: <input type="email" name="email">
-        </div>
-        <div>
-            month: <input type="month" name="month">
-        </div>
-        <div>
-            range: <input type="range" name="range">
-        </div>
-        <div>
-            hidden: <input name="hidden" type="hidden" value="control">
-        </div>
-        <div>
-            number: <input name="number" type="number">
+            textarea: <textarea name="content" rows="7" col="50">Placeholder</textarea>
         </div>
         <button>Send</button>
     </form>
