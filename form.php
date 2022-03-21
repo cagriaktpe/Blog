@@ -1,3 +1,10 @@
+<?php
+    
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    var_dump($_POST);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,19 +14,20 @@
     <title>Form</title>
 </head>
 <body>
-    <form method="post" action="process_form.php">
-        <select name="country" id="country">
-            <optgroup label="Europe">
-                <option value="germany">Germany</option>
-                <option value="france">France</option>
-                <option value="uk">United Kingdom</option>
-            </optgroup>
-            <optgroup label="America">
-                <option value="brazil" selected>Brazil</option>
-                <option value="canada">Canada</option>
-                <option value="usa">United States</option>
-            </optgroup>
-        </select>
+    <form method="post">
+        <p>Which colours do you like?</p>
+        <div>
+            <input type="checkbox" name="colors[]" value="red" id="red">
+            <label for="red">Red</label>
+        </div>
+        <div>
+            <input type="checkbox" name="colors[]" value="green" id="green">
+            <label for="green">Green</label>
+        </div>
+        <div>
+            <input type="checkbox" name="colors[]" value="blue" id="blue">
+            <label for="blue">Blue</label>
+        </div>
         <button>Send</button>
     </form>
 </body>
