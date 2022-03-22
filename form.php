@@ -16,20 +16,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <form method="post">
         <div>
-            <p>Which colours do you like?</p>
-            <div>
-                <input type="radio" id="blue" name="color" value="blue">
-                <label for="blue">Blue</label>
-            </div>     
-            <div>
-                <input type="radio" id="red" name="color" value="red" checked>
-                <label for="red">Red</label>
-            </div>   
-            <div>
-                <input type="radio" id="purple" name="color" value="purple">
-                <label for="purple">Purple</label>
-            </div>   
-        </div>    
+            <label for="title">Title:</label> <input type="text" name="title" id="title">
+        </div>
+        <div>
+            <label for="content">Content:</label>
+            <textarea name="content" id="content" cols="40" rows="4"></textarea>
+        </div>
+        <div>
+            <label><input type="checkbox" name="visible" id="visible" value="yes">Visible</label>
+        </div>
+        <div>
+            <p>Color:</p>
+            <label><input type="radio" name="color" id="blue" value="blue" checked>Blue</label>
+            <label><input type="radio" name="color" id="red" value="red" >Red</label>
+            <label><input type="radio" name="color" id="green" value="green">Green</label>
+        </div>
         <button>Send</button>
         
     </form>
