@@ -15,37 +15,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <form method="post">
-        <fieldset>
-            <legend>Article</legend>
-            <div>
-                <label for="title">Title:</label> <input type="text" name="title" id="title" value="example" readonly>
-            </div>
-            <div>
-                <label for="content">Content:</label>
-                <textarea autofocus name="content" id="content" cols="40" rows="4" placeholder="Content"></textarea>
-            </div>
-            <div>
-                <label for="lang">Language</label>
-                <select name="lang" id="lang" disabled>
-                    <option value="en">English</option>
-                    <option value="fr">French</option>
-                    <option value="es">Spanish</option>
-                </select>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Attributes</legend>
-            <div>
-                <label><input type="checkbox" name="visible" id="visible" value="yes">Visible</label>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Color</legend>
-            <label><input type="radio" name="color" id="blue" value="blue" checked>Blue</label><br>
-            <label><input type="radio" name="color" id="red" value="red" >Red</label><br>
-            <label><input type="radio" name="color" id="green" value="green">Green</label>
-        </fieldset>
-        
+        <div>
+            postcode: <input 
+            name="postcode" 
+            pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}"
+            title="Please enter a valid UK postcode">
+        </div>
+        <div>
+            email: <input type="email" name="email" required> 
+        </div>
+        <div>
+            url: <input type="url" name="url">
+        </div>
+        <div>
+            number: <input type="number" name="count" min="1" max="10">
+        </div>
         <button>Send</button>
         
     </form>
