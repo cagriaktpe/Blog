@@ -15,22 +15,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <form method="post">
-        <div>
-            <label for="title">Title:</label> <input type="text" name="title" id="title">
-        </div>
-        <div>
-            <label for="content">Content:</label>
-            <textarea name="content" id="content" cols="40" rows="4"></textarea>
-        </div>
-        <div>
-            <label><input type="checkbox" name="visible" id="visible" value="yes">Visible</label>
-        </div>
-        <div>
-            <p>Color:</p>
-            <label><input type="radio" name="color" id="blue" value="blue" checked>Blue</label>
-            <label><input type="radio" name="color" id="red" value="red" >Red</label>
+        <fieldset>
+            <legend>Article</legend>
+            <div>
+                <label for="title">Title:</label> <input type="text" name="title" id="title" placeholder="Article title">
+            </div>
+            <div>
+                <label for="content">Content:</label>
+                <textarea name="content" id="content" cols="40" rows="4" placeholder="Content"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Attributes</legend>
+            <div>
+                <label><input type="checkbox" name="visible" id="visible" value="yes">Visible</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Color</legend>
+            <label><input type="radio" name="color" id="blue" value="blue" checked>Blue</label><br>
+            <label><input type="radio" name="color" id="red" value="red" >Red</label><br>
             <label><input type="radio" name="color" id="green" value="green">Green</label>
-        </div>
+        </fieldset>
+        
         <button>Send</button>
         
     </form>
