@@ -18,11 +18,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <fieldset>
             <legend>Article</legend>
             <div>
-                <label for="title">Title:</label> <input type="text" name="title" id="title" placeholder="Article title">
+                <label for="title">Title:</label> <input type="text" name="title" id="title" value="example" readonly>
             </div>
             <div>
                 <label for="content">Content:</label>
-                <textarea name="content" id="content" cols="40" rows="4" placeholder="Content"></textarea>
+                <textarea autofocus name="content" id="content" cols="40" rows="4" placeholder="Content"></textarea>
+            </div>
+            <div>
+                <label for="lang">Language</label>
+                <select name="lang" id="lang" disabled>
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                </select>
             </div>
         </fieldset>
         <fieldset>
