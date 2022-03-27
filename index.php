@@ -2,6 +2,8 @@
 
 require './includes/database.php';
 
+$conn = getDB();
+
 $sql = "SELECT *
         FROM article
         ORDER BY published_at;";
@@ -15,7 +17,7 @@ if ($results === false) {
 }
 
 ?>
-<?php require './includes/database.php' ?>
+<?php require './includes/header.php' ?>
         <?php if (empty($articles)): ?>
             <p>No articles found.</p>
         <?php else: ?>

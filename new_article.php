@@ -4,9 +4,11 @@
     INSERT INTO article (title, content, published_at)
     VALUES ('title here', 'content here', 'published here')
     */
+    require './includes/database.php';
+
     if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-        require './includes/database.php';
+        $conn = getDB();
 
         $sql = "INSERT INTO article (title, content, published_at)
                 VALUES (?, ?, ?)"; 
