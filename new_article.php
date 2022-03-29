@@ -35,6 +35,11 @@
             if ($stmt === false) {
                 echo mysqli_error($conn);
             } else {
+
+                if($published_at == '') {
+                    $published_at = null;
+                }
+
                 mysqli_stmt_bind_param($stmt, "sss", $title, $content, $published_at);
             
                 if(mysqli_stmt_execute($stmt)) {
