@@ -27,8 +27,8 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])) {
           <p>Article not found.</p>
         <?php else: ?>
           <article>
-            <h2><?= $articles['title']; ?></h2>
-            <p><?= $articles['content']; ?></p>
+            <h2><?= htmlspecialchars($articles['title']); ?></h2>
+            <p><?= htmlspecialchars($articles['content']); ?></p>
           </article>  
         <?php endif; ?>
 <?php require './includes/footer.php' ?>
