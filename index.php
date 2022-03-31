@@ -18,6 +18,9 @@ if ($results === false) {
 
 ?>
 <?php require './includes/header.php' ?>
+
+<a href="new_article.php">New article</a>
+
         <?php if (empty($articles)): ?>
             <p>No articles found.</p>
         <?php else: ?>
