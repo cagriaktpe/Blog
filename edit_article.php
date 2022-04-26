@@ -9,10 +9,26 @@ if(isset($_GET['id'])) {
 
     $articles = getArticle($conn, $_GET['id']);
 
+    if($articles) {
+
+    $title = $articles['title'];
+    $content = $articles['content'];
+    $published_at = $articles['published_at'];
+    
+    } else {
+        die("article not found");
+    }
+
 } else {
 
-    $articles = null;
+    die("id not supplied, article not found");
 
 }
+?>
+<?php require 'includes/header.php'; ?>
 
-var_dump($articles);
+<h2>Edit Article</h2>
+
+<?php require 'includes/article_form.php'; ?>
+
+<?php require 'includes/footer.php'; ?>
