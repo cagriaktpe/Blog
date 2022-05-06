@@ -20,6 +20,8 @@ if(isset($_GET['id'])) {
           <article>
             <h2><?= htmlspecialchars($articles['title']); ?></h2>
             <p><?= htmlspecialchars($articles['content']); ?></p>
-          </article>  
+          </article>
+          
+          <a href="edit_article.php?id=<?= $articles['id'] ?>">Edit</a>
         <?php endif; ?>
 <?php require './includes/footer.php' ?>
