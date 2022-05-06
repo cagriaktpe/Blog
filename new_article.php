@@ -5,8 +5,8 @@
     VALUES ('title here', 'content here', 'published here')
     */
     require './includes/database.php';
+    require 'includes/article.php';
 
-    $errors = [];
     $title = '';
     $content = '';
     $published_at = '';
@@ -17,27 +17,7 @@
         $content = $_POST['content'];
         $published_at = $_POST['published_at'];
 
-        if($title == '') {
-            $errors[] = 'Title is required';
-        }
-
-        if($content == '') {
-            $errors[] = 'Content is required';
-        }
-
-        if($published_at != '') {
-            $date_time = date_create_from_format('Y-m-d H:i:s', $published_at);
-
-            if($date_time === false) {
-                $errors[] = "Invalid date and time";
-            } else {
-                
-                $date_errors = date_get_last_errors();
-                if($date_errors['warning_count'] > 0) {
-                    $errors[] = "Invalid date and time";
-                }
-            }
-        }
+        $errors = validateArticle($title, $content, $published_at);
 
         if(empty($errors)) {
             $conn = getDB();
