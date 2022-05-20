@@ -8,15 +8,10 @@ $conn = getDB();
 
 if(isset($_GET['id'])) {
 
-    $articles = getArticle($conn, $_GET['id']);
+    $articles = getArticle($conn, $_GET['id'], 'id');
 
     if($articles) {
-
-    $id = $articles['id'];
-    $title = $articles['title'];
-    $content = $articles['content'];
-    $published_at = $articles['published_at'];
-    
+        $id = $articles['id'];
     } else {
         die("article not found");
     }
