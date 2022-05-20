@@ -14,15 +14,17 @@ if(isset($_GET['id'])) {
 
 ?>
 <?php require './includes/header.php' ?>
-        <?php if ($articles == null): ?>
-          <p>Article not found.</p>
-        <?php else: ?>
-          <article>
-            <h2><?= htmlspecialchars($articles['title']); ?></h2>
-            <p><?= htmlspecialchars($articles['content']); ?></p>
-          </article>
-          
-          <a href="edit_article.php?id=<?= $articles['id'] ?>">Edit</a>
-          <a href="delete_article.php?id=<?= $articles['id'] ?>">Delete</a>
-        <?php endif; ?>
+<?php if ($articles == null): ?>
+<p>Article not found.</p>
+<?php else: ?>
+<article>
+    <h2><?= htmlspecialchars($articles['title']); ?></h2>
+    <p><?= htmlspecialchars($articles['content']); ?></p>
+</article>
+
+<a href="edit_article.php?id=<?= $articles['id'] ?>">Edit</a>
+<form method="post" action="delete_article.php?id=<?= $articles['id']; ?>">
+    <button>Delete</button>
+</form>
+<?php endif; ?>
 <?php require './includes/footer.php' ?>

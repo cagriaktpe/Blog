@@ -21,20 +21,20 @@ if ($results === false) {
 
 <a href="new_article.php">New article</a>
 
-        <?php if (empty($articles)): ?>
-            <p>No articles found.</p>
-        <?php else: ?>
+<?php if (empty($articles)): ?>
+<p>No articles found.</p>
+<?php else: ?>
 
-            <ul>
-                <?php foreach ($articles as $article): ?>
-                    <li>
-                        <article>
-                            <h2><a href="article.php?id=<?= $article['id']?>"><?= htmlspecialchars($article['title']); ?></a></h2>
-                            <p><?= htmlspecialchars($article['content']); ?></p>
-                        </article>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+<ul>
+    <?php foreach ($articles as $article): ?>
+    <li>
+        <article>
+            <h2><a href="article.php?id=<?= $article['id']?>"><?= htmlspecialchars($article['title']); ?></a></h2>
+            <p><?= htmlspecialchars($article['content']); ?></p>
+        </article>
+    </li>
+    <?php endforeach; ?>
+</ul>
 
-        <?php endif; ?>
+<?php endif; ?>
 <?php require './includes/footer.php' ?>
